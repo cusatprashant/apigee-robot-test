@@ -28,6 +28,7 @@ jobs:
 
       - name: Run Robot Tests
         run: |
+          chmod +x ./scripts/run_tests_locally.sh
           ./scripts/run_tests_locally.sh dev
 
       - name: Archive Test Reports
