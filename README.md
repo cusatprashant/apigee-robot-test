@@ -16,7 +16,7 @@
 
 Note: Add to Your Microservice Repo as Submodule
 
-#/bin/bash
+#!/bin/bash
 
 
 1
