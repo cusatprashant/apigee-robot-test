@@ -1,0 +1,40 @@
+name: Run API Contract Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          cd robot-tests
+          pip install -r requirements.txt
+
+      - name: Download Swagger Spec
+        run: |
+          cd robot-tests
+          ./scripts/download_swagger.sh dev
+
+      - name: Run Robot Tests
+        run: |
+          cd robot-tests
+          ./scripts/run_tests_locally.sh dev
+
+      - name: Archive Test Reports
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: robot-test-reports
+          path: robot-tests/reports/
