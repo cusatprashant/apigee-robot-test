@@ -19,21 +19,20 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd robot-tests
           pip install -r requirements.txt
 
       - name: Download Swagger Spec
         run: |
-          cd robot-tests
+          chmod +x ./scripts/download_swagger.sh
           ./scripts/download_swagger.sh dev
 
       - name: Run Robot Tests
         run: |
-          cd robot-tests
+          chmod +x ./scripts/run_tests_locally.sh
           ./scripts/run_tests_locally.sh dev
 
       - name: Archive Test Reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: robot-test-reports
