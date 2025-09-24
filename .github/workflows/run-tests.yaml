@@ -23,6 +23,7 @@ jobs:
 
       - name: Download Swagger Spec
         run: |
+          chmod +x ./scripts/download_swagger.sh
           ./scripts/download_swagger.sh dev
 
       - name: Run Robot Tests
