@@ -1,0 +1,4 @@
+base_url: "https://staging-api.yourcompany.com"
+auth_token: "Bearer staging-placeholder-token"
+timeout: 30
+verify_ssl: true

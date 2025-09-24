@@ -1,0 +1,4 @@
+base_url: "https://dev-api.yourcompany.com"
+auth_token: "Bearer dev-placeholder-token"
+timeout: 30
+verify_ssl: true

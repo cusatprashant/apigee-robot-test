@@ -1,0 +1,4 @@
+base_url: "https://api.yourcompany.com"
+auth_token: "Bearer prod-placeholder-token"
+timeout: 60
+verify_ssl: true
