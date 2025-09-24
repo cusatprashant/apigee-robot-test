@@ -1,4 +1,5 @@
 🧪 HOW TO USE
+
 ✅ Clone or scaffold the structure above.
 
 ✅ Replace https://dev-api.yourcompany.com with your actual Apigee endpoint.
@@ -13,7 +14,7 @@
 
 ✅ Trigger via GitHub Actions or Jenkins.
 
-🎁 BONUS: Add to Your Microservice Repo as Submodule
+Note: Add to Your Microservice Repo as Submodule
 
 bash
 
