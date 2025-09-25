@@ -1,9 +1,5 @@
 *** Settings ***
-Library           SeleniumLibrary
-
-*** Variables ***
-${GOOGLE_URL}     https://www.google.com
-${SEARCH_TERM}    Robot Framework
+Library    SeleniumLibrary
 
 *** Test Cases ***
 Open Google With Headless Chrome
@@ -11,6 +7,6 @@ Open Google With Headless Chrome
     Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
-    Create WebDriver    Chrome    chrome_options=${options}
+    Create WebDriver    Chrome    options=${options}
     Go To    https://www.google.com
     Page Should Contain    Google
